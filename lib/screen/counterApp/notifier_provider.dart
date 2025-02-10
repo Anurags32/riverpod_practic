@@ -9,4 +9,4 @@ class SearchNotifire extends StateNotifier<String> {
   void search(String query){
     state = query;
   }
-}
+} 
