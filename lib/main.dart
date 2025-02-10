@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpode_project/screen/counterApp/counter_app.dart';
 import 'package:riverpode_project/screen/counterApp/search_screen.dart';
-import 'package:riverpode_project/screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
