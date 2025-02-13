@@ -1,3 +1,26 @@
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final postProvider = FutureProvider<List<Riverpod_Model>>((ref) async {
+  try {
+    final respons =
+        await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
+    if (respons.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(respons.body);
+      List<Riverpod_Model> postList =
+          data.map((e) => Riverpod_Model.fromJson(e)).toList();
+      return postList;
+    } else {
+      throw "some things went wrong";
+    }
+  } catch (e) {
+    rethrow;
+  }
+});
+
 class Riverpod_Model {
   int? userId;
   int? id;

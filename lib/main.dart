@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpode_project/screen/counterApp/future_provider.dart';
-import 'package:riverpode_project/screen/counterApp/search_screen.dart';
+import 'package:riverpode_project/screen/api/api_calling.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const FutureProviderScreen(),
+        home: const ApiScreen(),
       ),
     );
   }
